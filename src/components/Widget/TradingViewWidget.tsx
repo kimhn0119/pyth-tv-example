@@ -56,6 +56,11 @@ const TradingViewWidget: React.FC<TradingViewWidgetProps> = ({
           container_id: "tradingview",
           autosize: true,
           symbol: `PYTH:${symbol}`,
+          studies: [
+            "MACD@tv-basicstudies",
+            "StochasticRSI@tv-basicstudies",
+            "TripleEMA@tv-basicstudies"
+          ],
           interval: resolution,
           timezone: getCurrentTimezoneName(),
           theme: systemTheme,
